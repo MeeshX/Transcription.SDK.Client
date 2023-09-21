@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MEESHX Transcription API</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div>
+    <h1>MEESHX Transcription API</h1>
+    <form>
+        <input type="file" id="wavFile" name="file" method="post">
+        <input type="submit" value="Upload">
+    </form>
+  </div>
+  <div>
+    <h3>Transcription:</h3>
+    <div id="result">Upload an audio file</div>
+  </div>
+
+  <script type="module">
+    //Import Transcription SDK from URL
+    import { Transcription } from "https://unpkg.com/transcription-sdk/dist/transcription"
+    
+    //create a new instance specifying your API key
+    const apiKey = 'TRANSCRIPTION_API_KEY';
+    const transcription = new Transcription(apiKey);
+
+    //catch div element for result
+    var resultDiv = document.getElementById('result');
+  
+    //Transcription function
+    const transcriptionApi = async function transcriptionApi(){
+      //Get audio file from input field
+      var audiofile = document.querySelector('#wavFile');
+      //Create a json object data with parameters
+      var data = {
+        file: audiofile,
+        languageCode: 'en-US',
+        provider: 'aws'
+      }
+      //Call transcription service
+
+      try{
+        // I only need to try catch here....
+        var result = await transcription.services.transcription(data);
+        //Print result in console
+        console.log("result: " + JSON.stringify(result));
+        //Print result transcription in HTML
+        resultDiv.innerHTML = result.transcription;
+      }
+      catch(e){
+        console.log(e);
+        //Print error in HTML
+        resultDiv.innerHTML = e;
+      }
+      
+    }
+    
+    //catch form element
+    const form = document.querySelector('form');
+    //catch form submit event
+    form.addEventListener('submit', event => {
+        event.preventDefault();
+        resultDiv.innerHTML = "Loading...";
+        //Call transcription function
+        transcriptionApi();
+    })
+  </script>
+
+</body>
+</html>
