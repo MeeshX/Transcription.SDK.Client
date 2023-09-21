@@ -1,0 +1,16 @@
+{
+  "name": "transcription-sdk",
+  "version": "1.0.10",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "transcription",
+    "speech",
+    "meeshx"
+  ],
+  "author": "MeeshX",
+  "license": "ISC"
+}

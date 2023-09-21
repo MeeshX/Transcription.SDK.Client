@@ -1,0 +1,39 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  branches:
+    include:
+    - dev
+
+pool: 'Orangedev-Self-Hosted-Linux'
+
+steps:
+    - task: NodeTool@0
+      inputs:
+          versionSpec: '18.x'
+      displayName: 'Install Node.js'
+
+    - script: |
+          npm install
+      workingDirectory: javascript-sdk
+      displayName: 'Install dependencies'
+
+    - script: |
+          npm pack
+      workingDirectory: javascript-sdk
+      displayName: 'Package package'
+
+    - task: CopyFiles@2
+      inputs:
+          contents: 'javascript-sdk/*.tgz'
+          targetFolder: $(Build.ArtifactStagingDirectory)
+      displayName: 'Copy archives to artifacts staging directory'
+
+    - task: PublishBuildArtifacts@1
+      inputs:
+          path: $(Build.ArtifactStagingDirectory)
+          artifact: package
+      displayName: 'Publish artifacts'
