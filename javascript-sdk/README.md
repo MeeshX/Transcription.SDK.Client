@@ -71,5 +71,5 @@ Output:
 For support, email info@screevo.ai
 
 
-![Logo](https://screevo.ai/wp-content/uploads/2022/02/LOGO-Screevo-hi-400x70.png)
+![Logo](https://www.meeshx.dev/wp-content/uploads/2023/09/Extended-Colour-positivenegative-use.svg)
 
