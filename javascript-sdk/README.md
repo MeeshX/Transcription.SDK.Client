@@ -1,7 +1,7 @@
 
 # MeeshX Transcription SDK
 
-MeeshX is the AI-powered platform to optimize, manage and supervise your speech-related services, making them more cost-efficient and hassle-free.
+MeeshX is a multicloud product that allows you to use the transcription services of all the main providers with a single service
 
 
 ## Speech Transcription
@@ -44,7 +44,7 @@ const transcription = new Transcription(apiKey);
 //Create object data
 var data = {
   file: audiofile,
-  languageCode: 'en-US'
+  languageCode: 'en-US',
   provider: 'aws'
 }
 
@@ -64,11 +64,11 @@ Output:
 
 ## Documentation
 
-[See Documentation](#)
+[See Documentation](https://documentation.meeshx.dev/)
 
 ## Support
 
-For support, email info@screevo.ai
+For support, email info@meeshx.dev
 
 
 ![Logo](https://www.meeshx.dev/wp-content/uploads/2023/09/Extended-Colour-positivenegative-use.svg)
