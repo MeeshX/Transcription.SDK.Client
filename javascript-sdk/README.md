@@ -68,7 +68,7 @@ Output:
 
 ## Support
 
-For support, email info@meeshx.dev
+For support, email us at unicorn@meeshx.dev
 
 
 ![Logo](https://www.meeshx.dev/wp-content/uploads/2023/09/Extended-Colour-positivenegative-use.svg)
