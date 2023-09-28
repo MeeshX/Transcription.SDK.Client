@@ -6,7 +6,7 @@ MeeshX Transcription is an easy and quick way to convert speech to text.
 MeeshX gives you access to the most powerful Speech-to-text engine provided by Amazon, Deepgram, Google, and Azure with a single SDK and API call.
 With MeeshX SDK, you can switch between any speech model provider without managing different SDKs, authentication, buckets, and billings.
 
-We offer free 60 minutes of audio conversion to all our private beta users to be used across all cloud services. To join our beta, reach out to unicorn@meeshx.dev 
+We offer free 60 minutes of audio conversion to all our private beta users to be used across all cloud services. To join our beta, reach out to helloworld@meeshx.dev 
 
 ## Documentation
 [See Documentation](https://documentation.meeshx.dev/)
@@ -16,6 +16,7 @@ We offer free 60 minutes of audio conversion to all our private beta users to be
 - A single service that allows you to use the speech services of all cloud providers
 - Always use the latest version of the providers' services
 - Easy switch. Switch providers by changing a simple string without affecting your business logic
+- Efficient audio handling: with a Voice Activity Detection (VAD) engine, all silence is removed making the transcription process faster and more cost-effective
 
 # MeeshX Transcription SDK
 
