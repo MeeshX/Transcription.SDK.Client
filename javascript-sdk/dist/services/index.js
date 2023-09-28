@@ -1,1 +1,1 @@
-export * from "./transcription-service";
+export * from "./meeshx-service";
