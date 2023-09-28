@@ -48,7 +48,7 @@ formData.append('languageCode', "en-US");   // choose your language
 formData.append('provider', 'azure');       // choose the backend transcription service to use
 
 axios({
-  url: 'https://dev-backbone.screevo.ai/api/upload/full/audio-file',
+  url: 'https://backbone.screevo.ai/api/upload/full/audio-file',
   method: 'post',
   headers: {
     ...formData.getHeaders({"auth-key": APIKEY}), // Add your MeeshX API Key
