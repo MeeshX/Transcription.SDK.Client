@@ -61,7 +61,7 @@ axios({
 ## API / cURL
 ### Audio file to text
 Extract text from an audio file.
-Enpodint: `https://dev-backbone.screevo.ai/api/upload/full/audio-file`
+Enpodint: `https://backbone.screevo.ai/api/upload/full/audio-file`
 Method: `POST`
 
 Request headers:
@@ -87,5 +87,5 @@ curl -v \
 	-F file='@audio.wav' \  # The audio file you want to convert
 	-F provider=aws \       # choose 
 	-F languageCode=en-US \
-	"https://dev-backbone.screevo.ai/api/upload/full/audio-file"
+	"https://backbone.screevo.ai/api/upload/full/audio-file"
 ```
