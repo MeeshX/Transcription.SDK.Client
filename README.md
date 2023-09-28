@@ -21,6 +21,10 @@ We offer free 60 minutes of audio conversion to all our private beta users to be
 # MeeshX Transcription SDK
 
 MeeshX Transcription SDK is a collection of SDK that simplify the usage of MeeshX
+Use our samples wav file to test our transcription services:
+* [harvard.wav](https://github.com/MeeshX/Transcription.SDK.Client/tree/main/audio_samples/harvard.wav) 18 seconds speech audio good quality
+* [jackhammer.wav](https://github.com/MeeshX/Transcription.SDK.Client/tree/main/audio_samples/jackhammer.wav) 3 seconds speech audio with high background noise
+* [voip_call.wav](https://github.com/MeeshX/Transcription.SDK.Client/tree/main/audio_samples/voip_call.wav) 33 seconds voip call
 
 ## Javascript (Angular, Vue, React)
  - [Documentation](https://github.com/MeeshX/Transcription.SDK.Client/tree/main/javascript-sdk)
