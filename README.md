@@ -27,6 +27,24 @@ Use our samples wav file to test our transcription services:
 * [voip_call.wav](https://github.com/MeeshX/Transcription.SDK.Client/tree/main/audio_samples/voip_call.wav) 33 seconds voip call
 
 ## Javascript (Angular, Vue, React)
+
+```js
+import { Meeshx } from 'meeshx-sdk';
+const apiKey = 'MEESHX_API_KEY';
+const meeshx = new Meeshx(apiKey);
+
+//Create object data
+var data = {
+  file: audiofile,
+  languageCode: 'en-US',
+  provider: 'aws'
+}
+
+//Call transcription service
+var result = await meeshx.services.transcription(data);
+
+```
+
  - [Documentation](https://github.com/MeeshX/Transcription.SDK.Client/tree/main/javascript-sdk)
  - [Example](https://github.com/MeeshX/Transcription.SDK.Client/blob/main/examples/html/meeshx.html)
 
@@ -74,7 +92,7 @@ Request headers:
 | Request Header | Description                                                                                      |
 |----------------|--------------------------------------------------------------------------------------------------|
 | Content-Type   | `rquired` `multipart/form-data`                                                                  | 
-| access-key     | `required` Get in touch at [unicorn@meeshx.dev](mailto:unicorn@meeshx.dev) for a beta access-key | 
+| access-key     | `required` Get in touch at [helloworld@meeshx.dev](mailto:helloworld@meeshx.dev) for a beta access-key | 
 
 Request Body:
 
@@ -88,7 +106,7 @@ Request Body:
 Example: 
 ```shell
 curl -v \
-	-H "access-key: <get in touch! unicorn@meeshx.dev>" \
+	-H "access-key: <get in touch! helloworld@meeshx.dev>" \
 	-F file='@audio.wav' \  # The audio file you want to convert
 	-F provider=aws \       # choose 
 	-F languageCode=en-US \

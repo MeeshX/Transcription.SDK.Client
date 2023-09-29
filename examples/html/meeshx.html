@@ -20,12 +20,12 @@
   </div>
 
   <script type="module">
-    //Import Transcription SDK from URL
-    import { Transcription } from "https://unpkg.com/transcription-sdk/dist/transcription"
+    //Import Meeshx SDK from URL
+    import { Meeshx } from "https://unpkg.com/meeshx-sdk/dist/meeshx"
     
     //create a new instance specifying your API key
-    const apiKey = 'TRANSCRIPTION_API_KEY';
-    const transcription = new Transcription(apiKey);
+    const apiKey = 'MEESHX_API_KEY';
+    const meeshx = new Meeshx(apiKey);
 
     //catch div element for result
     var resultDiv = document.getElementById('result');
@@ -44,7 +44,7 @@
 
       try{
         // I only need to try catch here....
-        var result = await transcription.services.transcription(data);
+        var result = await meeshx.services.transcription(data);
         //Print result in console
         console.log("result: " + JSON.stringify(result));
         //Print result transcription in HTML

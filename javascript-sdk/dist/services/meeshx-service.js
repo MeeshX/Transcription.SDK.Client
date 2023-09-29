@@ -8,7 +8,7 @@ export class Services {
     this._apiKey = apiKey;
   }
 
-  transcription = async function getAwsTranscription(dataobj) {
+  transcription = async function getTranscription(dataobj) {
     validateFile(dataobj.file.files[0]);
 
     const configData = getConfig();
@@ -18,13 +18,16 @@ export class Services {
     formData.append("file", dataobj.file.files[0]);
     formData.append('languageCode', dataobj.languageCode);
     formData.append('provider', dataobj.provider);
-    formData.append('apiKey', this._apiKey);
     
-    var result = await axios.post(configData.baseUrl + '/api/upload/full/audio-file',
-      formData, {
+    var result = await axios(
+      {
+        url: configData.baseUrl + '/api/upload/full/audio-file',
+        method: 'post',
         headers: {
-          'Content-Type': 'multipart/form-data'
-        }
+          'Content-Type': 'multipart/form-data',
+          'access-key': this._apiKey
+        },
+        data: formData,
       }
     );
     
