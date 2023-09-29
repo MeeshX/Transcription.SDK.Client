@@ -1,16 +1,16 @@
 export function validateUser(apiKey) {
     if (!apiKey || apiKey.trim().length === 0) {
-      throw new Error("MeeshX Transcription SDK: API key is required");
+      throw new Error("MeeshX SDK: API key is required");
     }
 }
 
 export function validateFile(audioSource) {
   if (!audioSource) {
-    throw new Error("MeeshX Transcription SDK: Audio File is required");
+    throw new Error("MeeshX SDK: Audio File is required");
   }
 
   if (!validate_fileupload(audioSource.name)) {
-    throw new Error("MeeshX Transcription SDK: Uploaded file is not audio");
+    throw new Error("MeeshX SDK: Uploaded file is not audio");
   }
 }
 

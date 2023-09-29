@@ -1,7 +1,7 @@
 import { Services } from './services';
 import { validateUser } from "./helpers";
 
-export class Transcription {
+export class Meeshx {
   constructor(apiKey) {
     this._apiKey = apiKey;
     
@@ -10,6 +10,3 @@ export class Transcription {
     this.services = new Services(this._apiKey);
   }
 }
-
-
-
